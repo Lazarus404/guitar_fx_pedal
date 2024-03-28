@@ -1,0 +1,20 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity guitar_fx_pedal is
+	port (PB : in STD_LOGIC;
+			LED0 : out STD_LOGIC;
+			LED1 : out STD_LOGIC;
+			LED2 : out STD_LOGIC;
+			LED3 : out STD_LOGIC;
+			LED4 : out STD_LOGIC);
+end guitar_fx_pedal
+
+architecture Behavioral of guitar_fx_pedal is
+begin
+	LED0 <= PB;
+	LED1 <= not PB;
+	LED2 <= PB;
+	LED3 <= not PB;
+	LED4 <= PB;
+end Behavioral;
